@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cateto1=prompt("Introduzca el primer cateto: ");
+            var cateto2=prompt("Introduzca el segundo cateto: ");
+            var hipotenusa= Math.sqrt(Math.pow(cateto1, 2)+Math.pow(cateto2, 2));
+            $("#resulthipotenusa").html("El resultado de calcular la hipotenusa es: " +hipotenusa);
+        });
+        </script>
+</head>
+<body>
+    <h3 id="resulthipotenusa"></h3>
+</body>
+</html>
