@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 16</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var vel1=parseInt(prompt("Introduzca la velocidad del vehiculo 1 en Km/h: "));
+            var vel2=parseInt(prompt("Introduzca la velocidad del vehiculo 2 en Km/h: "));
+            if(vel1>vel2)
+            {
+                alert("La velocidad indicada en el vehiculo 1 es mayor que el del vehiculo 2, por lo que nunca se encontrarian; introduzca de nuevo las velocidades:")
+                vel1=parseInt(prompt("Introduzca la velocidad correcta del vehiculo 1: "));
+                vel2=parseInt(prompt("Introduzca la velocidad correcta del vehiculo 2: "));
+            }
+            var dis=parseInt(prompt("Introduzca la distancia que hay entre los coches en Km: "))
+            var tiempo=dis/(vel2-vel1);
+            var timepomin=tiempo*60;
+            $("#resultado").html("El tiempo que tardarían en encontrarse sería de: " + timepomin + " minutos")
+        });
+        </script>
+</head>
+<body>
+   <h3 id="resultado"></h3> 
+</body>
+</html>
