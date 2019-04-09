@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num1=parseInt(prompt("Introduzca el primer numero: "));
+            var num2=parseInt(prompt("Introduzca el segundo numero: "));
+            var suma=num1+num2;
+            var resta=num1-num2;
+            var division=num1/num2;
+            var multiplicacion=num1*num2;
+            $("#resultsuma").html("La suma de los dos numeros es: " + suma);
+            $("#resultresta").html("La resta de los dos numeros es: " + resta);
+            $("#resultmulti").html("La multiplicacion de los dos numeros es: " + multiplicacion);
+            $("#resultdivi").html("La division de los dos numeros es: " + division);
+        });
+        </script>
+</head>
+<body>
+    <h3 id="resultsuma"></h3>
+    <h3 id="resultresta"></h3>
+    <h3 id="resultmulti"></h3>
+    <h3 id="resultdivi"></h3>
+</body>
+</html>
