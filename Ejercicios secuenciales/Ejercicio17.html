@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var hor1=parseInt(prompt("¿A qué hora sale el ciclista (horas)?"));
+            var min1=parseInt(prompt("¿A qué hora sale el ciclista (minutos)?"));
+            var seg1=parseInt(prompt("¿A qué hora sale el ciclista (segundos)?"));
+            var tiempo=prompt("¿Cuántos segundos tarda en llegar?");
+            var hor2=parseInt(tiempo/3600);
+            var restohoras=tiempo%3600;
+            var min2=parseInt(restohoras/60);
+            var seg2=restohoras%60;
+            var totalh=hor1+hor2;
+            var totalm=min1+min2;
+            var totals=seg1+seg2;
+            $("#resultado").html("La hora de llegada es la: "+totalh+":"+totalm+":"+totals+" horas");
+        });
+        </script>
+</head>
+<body>
+    <h3 id="resultado"></h3>
+</body>
+</html>
