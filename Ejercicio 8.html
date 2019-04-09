@@ -13,11 +13,12 @@
             var ind1=parseInt(prompt("Introduzca la cantidad de la primera venta: "));
             var ind2=parseInt(prompt("Introduzca la cantidad de la segunda venta: "));
             var ind3=parseInt(prompt("Introduzca la cantidad de la tercera venta: "));
-            var total=sueldo+ind1
+            var total=sueldo+(ind1+ind2+ind3)*0.1;
+            $("#final").html("El total del sueldo de Pocholo es de: "+total+"€");
         });
         </script>
 </head>
 <body>
-    
+    <h3 id="final"></h3>
 </body>
 </html>
