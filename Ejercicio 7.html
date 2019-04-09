@@ -10,7 +10,7 @@
     <script>
         $(document).ready(function(){
             var min1=parseInt(prompt("Introduzca los minutos que quiere convertir: "));
-            var horas=Math.round(min1/60);
+            var horas=parseInt(min1/60);
             var min2=min1%60;
             $("#horatotal").html("Los minutos convertidos a horas y minutos son: " + horas + " horas y " + min2 + " minutos");
         });
