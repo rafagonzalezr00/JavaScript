@@ -9,12 +9,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            var num=parseInt(prompt("Introduzca el numero que quiere invertir: "));
-            var partent=
+            var num=(prompt("Introduzca el numero que quiere invertir: "));
+            while  (num<10 || num>=99)
+            {
+                num=(prompt("El numero introducido no es de dos cifras, escriba uno"));
+                
+            };
+            var partdec=(num%10);
+            var partent=((num-partdec)/10);
+            $("#resultado").html("El numero introducido anteriormente era: " + num + "; ahora dado la vuelta es: "+ partdec + partent);
         });
         </script>
 </head>
 <body>
-    
+    <h3 id="resultado"></h3>
 </body>
 </html>
