@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var x1=parseInt(prompt("Introduzca la coordenada X1: "));
+            var y1=parseInt(prompt("Introduzca la coordenada Y1: "));
+            var x2=parseInt(prompt("Introduzca la coordenada X2: "));
+            var y2=parseInt(prompt("Introduzca la coordenada Y2: "));
+            var distancia=(Math.pow((x1-x2), 2) + Math.pow((y1-y2), 2))
+            var final=Math.sqrt(distancia);
+            $("#resultado").html("La distancia entre los dos puntos es de: " + final)
+        });
+        </script>
+</head>
+<body>
+    <h3 id="resultado"></h3>
+</body>
+</html>
