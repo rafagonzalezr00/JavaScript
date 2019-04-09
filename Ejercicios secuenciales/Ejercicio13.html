@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num1=parseInt(prompt("Introduzca el numero que quiere hacer las raices: "));
+            var raiz2=Math.sqrt(num1);
+            var raiz3=Math.cbrt(num1);
+            $("#resultado").html("La raíz cuadrada del número es: " + raiz2 + "; la raíz cúbica del número es: " + raiz3);
+        });
+        </script>
+</head>
+<body>
+    <h3 id="resultado"></h3>
+</body>
+</html>
