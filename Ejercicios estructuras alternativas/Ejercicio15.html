@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 15</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numalumn=parseInt(prompt("Introduzca la cantidaz de alumnos que van al viaje"));
+            var costebus, costealum;
+            if(numalumn<30)
+            {
+                costealum=4000/numalumn;
+                costebus=4000;
+            }
+            else if(numalumn>=30 && numalumn<=49)
+            {
+                costealum=95;
+                costebus=costealum*numalumn;
+            }
+            else if(numalumn>=50 && numalumn<=99)
+            {
+                costealum=70;
+                costebus=costealum*numalumn;
+            }
+            else if(numalumn>=100)
+            {
+                costealum=65;
+                costebus=costealum*numalumn;
+            }
+            $("#result").html("El total que hay que pagar a la compañia de bus es de: " + costebus + " €; cada alumno tiene que pagar un total de: " + costealum + " €.");
+        });
+        </script>
+</head>
+<body>
+    <h3 id="result"></h3>
+</body>
+</html>
