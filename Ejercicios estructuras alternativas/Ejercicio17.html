@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var caraen=parseInt(prompt("Introduzca la cara del dado que le ha tocado"));
+            var carasal;
+            if(caraen>=1 && caraen<=6)
+            {
+                switch (caraen){
+                    case 1:{
+                        alert("La cara opuesta es la del número 6");
+                        break;
+                    }
+                    case 2:{
+                        alert("La cara opuesta es la del número 5");
+                        break;
+                    }
+                    case 3:{
+                        alert("La cara opuesta es la del número 4");
+                        break;
+                    }
+                    case 4:{
+                        alert("La cara opuesta es la del número 3");
+                        break;
+                    }
+                    case 5:{
+                        alert("La cara opuesta es la del número 2");
+                        break;
+                    }
+                    default:{
+                        alert("La cara opuesta es la del número 1");
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                caraen=prompt("El número anteriormente introducido no es válido, introduzca uno válido: 1-6");
+            }
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
