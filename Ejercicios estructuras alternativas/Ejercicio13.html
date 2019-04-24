@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var dia=parseInt(prompt("Introduzca el dia de la fecha"));
+            var mes=parseInt(prompt("Introduzca el mes de la fecha"));
+            var ano=parseInt(prompt("Introduzca el año de la fecha"));
+            var numdia;
+            switch (mes){
+            case 1:{
+                numdia=31;
+                break;
+            }
+            case 2:{
+                numdia=28;
+                break;
+            }
+            case 3:{
+                numdia=31;
+                break;
+            }
+            case 4:{
+                numdia=30;
+                break;
+            }
+            case 5:{
+                numdia=31;
+                break;
+            }
+            case 6:{
+                numdia=30;
+                break;
+            }
+            case 7:{
+                numdia=31;
+                break;
+            }
+            case 8:{
+                numdia=31;
+                break;
+            }
+            case 9:{
+                numdia=30;
+                break;
+            }
+            case 10:{
+                numdia=31;
+                break;
+            }
+            case 11:{
+                numdia=30;
+                break;
+            }
+            case 12:{
+                numdia=31;
+                break;
+            }
+            default:{
+                $("#result").html("La fecha está mal introducida");
+                break;
+            }
+            }
+            if(dia<1 || dia>numdia)
+            {
+                $("#result").html("La fecha está mal introducida");
+            }
+            else{
+                $("#result").html("La fecha está bien introducida");
+            }
+        });
+        </script>
+</head>
+<body>
+    <h3 id="result"></h3>
+</body>
+</html>
