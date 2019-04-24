@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 14</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var kilos=parseInt(prompt("Introduzca los kilos de uva que ha traido el vinicultor"))
+            var precio=parseFloat(prompt("¿Cuánto cuesta el kilo de uva?"));
+            var tipo=prompt("¿Qué tipo de uva es? (a) o (b)");
+            var tamaño=parseInt(prompt("¿Qué tamaño es? (1) o (2)"));
+            var total;
+            switch (tipo)
+            {
+                case "a":
+                    if (tamaño==1)
+                    {
+                        total=(precio+0.2)*kilos;
+                        $("#resultado").html("El precio final de la uva es " + total + " €");
+                        break;
+                    }
+                    if (tamaño==2)
+                    {
+                        total=(precio+0.3)*kilos;
+                        $("#resultado").html("El precio final de la uva es " + total +" €");
+                        break;
+                    }
+                case "b":
+                    if (tamaño==1)
+                    {
+                        total=(precio-0.3)*kilos;
+                        $("#resultado").html("El precio final de la uva es " + total + " €");
+                        break;
+                    }
+                    if (tamaño==2)
+                    {
+                        total=(precio-0.5)*kilos;
+                        $("#resultado").html("El precio final de la uva es " + total +" €");
+                        break;
+                    }
+                default: 
+                {
+                    $("#resultado").html("El tipo o el tamaño de la uva es incorrecto");
+                }
+            }
+        });
+        </script>
+</head>
+<body>
+    <h3 id="resultado"></h3>
+</body>
+</html>
