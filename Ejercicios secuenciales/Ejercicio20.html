@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var mon2e=parseInt(prompt("Introduzca cuantas monedas de 2€ tienes: "));
+            var mon1e=parseInt(prompt("Introduzca cuantas monedas de 1€ tienes: "));
+            var mon50c=parseInt(prompt("Introduzca cuantas monedas de 50 centimos tienes: "));
+            var mon20c=parseInt(prompt("Introduzca cuantas monedas de 20 centimos tienes: "));
+            var mon10c=parseInt(prompt("Introduzca cuantas monedas de 10 centimos tienes: "));
+            var mon5c=parseInt(prompt("Introduzca cuantas monedas de 5 centimos tienes: "));
+            var mon2c=parseInt(prompt("Introduzca cuantas monedas de 2 centimos tienes: "));
+            var mon1c=parseInt(prompt("Introduzca cuantas monedas de 1 centimo tienes: "));
+
+            var totaldin=mon2e*200+mon1e*100+mon50c*50+mon20c*20+mon10c*10+mon5c*5+mon2c*2+mon1c;
+            var totale=parseInt(totaldin/100);
+            var totalc=totaldin%100;
+            alert("El dinero total que tienes es de: " + totale + " € y " + totalc + " centimos");
+        });
+        </script>
+</head>
+<body>
+    <!-- 2 de 2 e
+    1 de 1 e
+    2 de 50 c
+    1 de 20 c
+    3 de 10 c
+    2 de 5 c
+    1 de 2 c
+    0 de 1 c -->
+</body>
+</html>
