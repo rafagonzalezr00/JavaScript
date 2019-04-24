@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var zonades=prompt("Introduzca la zona de destino");
+            var peso=parseInt(prompt("Introduzca el peso del paquete en gramos"));
+            var coste;
+            if(peso<5000)
+            {
+                switch (zonades){
+                    case "1":
+                    coste=peso*24;
+                    alert("El precio del transporte del paquete es: " + coste + "€");
+                    break;
+                    case "2":
+                        coste=peso*20;
+                        alert("El precio del transporte del paquete es: " + coste + "€");
+                        break;
+                    case "3":
+                        coste=peso*21;
+                        alert("El precio del transporte del paquete es: " + coste + "€");
+                        break;
+                    case "4":
+                        coste=peso*10;
+                        alert("El precio del transporte del paquete es: " + coste + "€");
+                        break;
+                    case "5":
+                        coste=peso*18;
+                        alert("El precio del transporte del paquete es: " + coste + "€");
+                        break;
+                    default:
+                    {
+                        alert("Zona desconocida");
+                    }
+                }
+            }
+            else
+        {
+            alert("El peso ha superado los 5 KG (5000 gr).");
+        }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
