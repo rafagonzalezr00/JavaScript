@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num1=parseInt(prompt("Introduzca el primer lado"));
+            var num2=parseInt(prompt("Introduzca el segundo lado"));
+            var num3=parseInt(prompt("Introduzca el tercer lado"));
+            var comp1=Math.pow(num1, 2);
+            var comp2=Math.pow(num2, 2);
+            var comp3=Math.pow(num3, 2);
+
+            if(comp1==(comp2+comp3))
+            {
+                alert("Los lados introducidos son de un triangulo rectangulo");
+            }
+            if(comp2==(comp1+comp3))
+            {
+                alert("Los lados introducidos son de un triangulo rectangulo");
+            }
+            if(comp3==(comp1+comp2))
+            {
+                alert("Los lados introducidos son de un triangulo rectangulo");
+            }
+            if(num1==num2 && num1!=num3)
+            {
+                alert("Los lados introducidos pertenecen a un triangulo isosceles");
+            }
+            if(num1==num3 && num1!=num2)
+            {
+                alert("Los lados introducidos pertenecen a un triangulo isosceles");
+            }
+            if(num2==num3 && num2!=num1)
+            {
+                alert("Los lados introducidos pertenecen a un triangulo isosceles");
+            }
+            if(num1==num2 && num1==num3)
+            {
+                alert("Los lados introducidos pertenecen a un triangulo equilatero");
+            }
+            if(num1!=num2 && num1!=num3 && num2!=num3)
+            {
+                alert("Los lados introducidos pertenecen a un triangulo escaleno");
+            }
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
