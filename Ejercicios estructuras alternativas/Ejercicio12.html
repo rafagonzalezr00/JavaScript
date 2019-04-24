@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var ano=parseInt(prompt("Introduzca el año que quiere comprobar si es bisiesto"));
+            if((ano % 4 == 0) && ((ano % 100 != 0) || (ano % 400 == 0)))
+            {
+                alert("El año introducido es bisiesto");
+            }
+            else
+            {
+                alert("El año introducido no es bisiesto");
+            }
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
