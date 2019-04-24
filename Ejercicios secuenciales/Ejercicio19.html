@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var bien=parseInt(prompt("Introduzca el numero de respuestas bien: "));
+            var mal=parseInt(prompt("Introduzca el numero de respuestas mal: "));
+            var blanco=parseInt(prompt("Introduzca el numero de respuestas en blanco: "));
+            var totpre=bien+mal+blanco;
+            while(totpre>21)
+            {
+                alert("El numero de preguntas total supera las 20, por lo que algo falla");
+                var bien=parseInt(prompt("Introduzca el numero correcto de respuestas bien: "));
+                var mal=parseInt(prompt("Introduzca el numero correcto de respuestas mal: "));
+                var blanco=parseInt(prompt("Introduzca el numero correcto de respuestas en blanco: "));
+            }
+            notafin=(bien*5-mal)/10;
+            alert("La nota del alumno es de un: " + notafin);
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
