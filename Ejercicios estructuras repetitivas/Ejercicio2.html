@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numale=parseInt(Math.random()*101);
+            var vidas=10;
+            var intentos;
+            alert(numale);
+            var numped=parseInt(prompt("Introduzca un numero a ver si lo aciertas"));
+            while(vidas>0)
+            {
+                if(numped!=numale)
+                {
+                    if(numped>numale)
+                    {
+                        alert("El número aleatorio es menor que " + numped);
+                    }
+                    else if(numped<numale)
+                    {
+                        alert("El número aleatorio es mayor que " + numped);
+                    }
+                    numped=parseInt(prompt("Introduzca otro numero a ver si lo aciertas"));
+                    vidas=vidas-1;
+                }
+                else
+                {
+                    intentos=10-vidas;
+                    alert("Has acertado el número en un total de " + intentos + " intentos");
+                    break;
+                }
+            }
+            
+            
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
