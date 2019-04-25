@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num1=parseInt(prompt("Introduzca el primer número"));
+            var num2=parseInt(prompt("Introduzca el segundo número"));
+            var suma=0, numfuera=0, numigu=0;
+            if(num1>num2)
+            {
+                num1=prompt("El limite inferior es mayor que el limite superior, vuelva a introducirlo");
+            }
+            var numinto=parseInt(prompt("Introduzca el primer numero"));
+            while(numinto!=0)
+            {
+                if(numinto>=num1 && numinto<=num2)
+                {
+                    suma=suma+numinto
+                }
+                else if(numinto>=num2 && numinto<=num1)
+                {
+                    numfuera++;
+                }
+                else if(numinto==num1 || numinto==num2)
+                {
+                    numigu++;
+                }
+                numinto=parseInt(prompt("Introduzca un numero"));
+            }
+            alert("La suma de los numeros que estan dentro del intervalo es: " + suma);
+            alert("Has introducido en total " + numfuera + " numeros que estan fuera del intervalo");
+            alert("Has introducido en total " + numigu + " numeros iguales que los intervalos"); 
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
