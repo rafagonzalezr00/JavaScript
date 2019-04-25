@@ -16,18 +16,18 @@
             {
                 num1=prompt("El limite inferior es mayor que el limite superior, vuelva a introducirlo");
             }
-            var numinto=parseInt(prompt("Introduzca el primer numero"));
+            var numinto=parseInt(prompt("Introduzca un numero"));
             while(numinto!=0)
             {
                 if(numinto>=num1 && numinto<=num2)
                 {
                     suma=suma+numinto
                 }
-                else if(numinto>=num2 && numinto<=num1)
+                if(numinto>=num2 || numinto<=num1)
                 {
                     numfuera++;
                 }
-                else if(numinto==num1 || numinto==num2)
+                if(numinto==num1 || numinto==num2)
                 {
                     numigu++;
                 }
