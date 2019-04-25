@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num=parseInt(prompt("Introduzca un número"));
+            var numinto=1;
+            var suma=num;
+            var media=suma/numinto;
+            while(num!=0)
+            {
+                num=parseInt(prompt("Introduzca un número"));
+                suma=suma+num;
+                numinto++;
+            }
+            media=suma/numinto;
+            alert("Has introducido en total " + numinto + " números, cuya suma es: " + suma + " y la media de todos los números es: " + media);
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
