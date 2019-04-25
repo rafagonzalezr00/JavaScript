@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num1=parseInt(prompt("Introduzca el número que desea obtener la tabla de multiplicar"));
+            var result=0, multi=10;
+            for(multi=10; multi>=0; multi--)
+            {
+                result=multi*num1;
+                $("#result").prepend(num1 + "x" + multi + "=" + result + "<br/>")
+            }
+        });
+        </script>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+</html>
