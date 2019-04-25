@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var intentos=parseInt(prompt("Introduzca el total de números que quiere introducir"));
+            var numpos=0, numneg=0, ceros=0, numinto, total=0;
+            while(intentos>0)
+            {
+                numinto=parseInt(prompt("Introduzca un número"));
+                if(numinto>0)
+                {
+                    numpos++;
+                }
+                if(numinto<0)
+                {
+                    numneg++;
+                }
+                if(numinto==0)
+                {
+                    ceros++;
+                }
+                intentos--;
+            }
+            total=numpos+numneg+ceros;
+            alert("Al final has introducido " + total + " números, de los cuales son " + numpos + " positivos, " + numneg + " negativos y " + ceros + " ceros");
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
