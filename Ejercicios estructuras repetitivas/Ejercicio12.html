@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var ahpm=0, suma=0, mes=1;
+            for(;mes<13; mes++)
+            {
+                ahpm=parseFloat(prompt("¿Cuanto ha ahorrado en este mes?"));
+                suma=suma+ahpm;
+                $("#sumatorio").prepend("En el mes ", mes, " has ahorrado ", ahpm, " € <br/>");
+            }
+            $("#total").html(suma, " € has ahorrado en este año");
+        });
+        </script>
+</head>
+<body>
+    <p id="sumatorio"></p>
+    <p id="total"></p>
+</body>
+</html>
