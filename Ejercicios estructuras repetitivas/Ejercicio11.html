@@ -13,9 +13,10 @@
             var num=prompt("Introduzca un numero para comprobar si es primo");
             var cont=1;
             var div=0;
-            while (cont<=numero)
+            var resto;
+            while (cont<=num)
             {
-                var resto=numero%cont
+                resto=num%cont;
                 if (resto==0)
                 {
                     div++;
