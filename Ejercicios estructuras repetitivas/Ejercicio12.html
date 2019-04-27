@@ -14,9 +14,9 @@
             {
                 ahpm=parseFloat(prompt("¿Cuanto ha ahorrado en este mes?"));
                 suma=suma+ahpm;
-                $("#sumatorio").prepend("En el mes ", mes, " has ahorrado ", ahpm, " € <br/>");
+                $("#sumatorio").prepend("En el mes " + mes + " has ahorrado " + ahpm + " € <br/>");
             }
-            $("#total").html(suma, " € has ahorrado en este año");
+            $("#total").html(suma + " € has ahorrado en este año");
         });
         </script>
 </head>
