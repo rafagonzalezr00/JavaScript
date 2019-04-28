@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var dias=7;
+            var suma=0;
+            var total=0;
+            var sueldo=parseInt(prompt("¿Cuál es el suedo por hora del trabajador?"));
+            while(dias>1)
+            {
+                var horas=parseInt(prompt("¿Cuantas horas has trabajado hoy?"));
+                suma=suma+horas;
+                dias--;
+                $("#sumatorio").prepend("En el dia "+dias+" ha trabajado "+horas+" horas <br/>");
+            }
+            var total=sueldo*suma;
+            $("#total").html("En total por las horas que ha hechado ("+suma+") tiene que cobrar " + total + " € por las horas semanales");
+        });
+        </script>
+</head>
+<body>
+    <p id="sumatorio"></p>
+    <p id="total"></p>
+</body>
+</html>
