@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var total=0, totalhora=0;
+            var numem=parseInt(prompt("Introduzca los trabajadores que hay en la empresa"));
+            var sueldoph=parseFloat(prompt("Introduzca el sueldo por hora de los trabajadores"));
+            for(var emple=1; emple<=numem;emple++)
+            {
+                var dias=parseInt(prompt("Introduzca los dias que ha trabajado el trabajador nº " + emple));
+                for(var diasres=1; diasres<=dias; diasres++)
+                {
+                    var horas=parseFloat(prompt("Introduzca las horas que ha trabajado en el dia nº " + diasres));
+                    totalhora=totalhora+horas;
+                }
+                var sueldo=totalhora*sueldoph;
+                $("#cont").prepend("El trabajador nº " + emple + " tiene que cobrar " + sueldo + " € por " + totalhora + " horas trabajadas en " + dias + " dias <br/>");
+                total=total+sueldo;
+                diasres=1;
+                totalhora=0;
+                horas=0;
+                sueldo=0;
+            }
+            $("#result").html("El total que tienen que cobrar entre todos los trabajadores es: " + total + " €");
+        });
+        </script>
+</head>
+<body>
+    <p id="cont"></p>
+    <p id="result"></p>
+</body>
+</html>
