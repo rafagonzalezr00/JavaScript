@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 16</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numem=parseInt(prompt("Introduzca el numero de empleados que tiene la empresa"));
+            var sueldoph=parseFloat(prompt("Introduzca el sueldo por hora de los trabajadores"));
+            var total=0;
+            for(var emple=1;emple<=numem;emple++)
+            {
+                var hora=parseFloat(prompt("Introduzca las horas que ha trabajado el trabajador nº " + emple));
+                var sueldo=hora*sueldoph;
+                total=total+sueldo;
+                $("#cont").prepend("El trabajador nº " + emple + " tiene que cobrar " + sueldo + " € por las horas que ha trabajado (" + hora + ") <br/>");
+            }
+            $("#result").html("El total a cobrar por todos los trabajadores es: " + total + " €");
+        });
+        </script>
+</head>
+<body>
+    <p id="cont"></p>
+    <p id="result"></p>
+</body>
+</html>
