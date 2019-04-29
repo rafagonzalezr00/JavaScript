@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad=prompt("Escriba una frase");
+            var cad2=cad.split("");
+            var cad3=cad.toUpperCase();
+            for(var cont=0;cont<cad.length;cont++)
+            {
+                if (cad3[cont]===cad2[cont])
+                {
+                    cad2[cont]=cad2[cont].toLowerCase();
+                }
+                else
+                {
+                    cad2[cont]=cad2[cont].toUpperCase();
+                }
+            }
+            var cad4=cad2.join("");
+            alert(cad4);
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
