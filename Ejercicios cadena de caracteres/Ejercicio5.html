@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad=prompt("Introduzca el nombre de una persona y le devuelvo las iniciales");
+            var sig="";
+            var cont=0;
+            for(cont=0; cont<cad.length; cont++)
+            {
+                if(cont==0)
+                {
+                    sig=sig+cad[cont];
+                }
+                if(cad[cont]==" ")
+                {
+                    sig=sig+cad[cont+1];
+                }
+            }
+            alert("Las siglas de esta persona son: " + sig);
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
