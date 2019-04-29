@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad=prompt("Escriba una palabra para comprobar si es palindroma");
+            var cad2="";
+            for(var cont=0;cont<cad.length; cont++)
+            {
+                cad2=cad[cont]+cad2;
+            }
+            if(cad===cad2)
+            {
+                $("#result").html("La palabra " + cad + " es un palindromo");
+            }
+            else
+            {
+                $("#result").html("La palabra " + cad + " no es un palindromo");
+            }
+        });
+        </script>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+</html>
