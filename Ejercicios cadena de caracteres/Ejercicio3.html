@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad=prompt("Introdzca una cadena de caracteres");
+            var car=prompt("Introduzca un caracter para ver cuantas veces se repite");
+            var cont=0, vez=0;
+            while(car.length>1)
+            {
+                car=prompt("Lo introducido anteriormente no es un caracter, introduzca uno");
+            }
+            for(cont=0; cont<cad.length; cont++)
+            {
+                if(cad[cont]===car)
+                {
+                    vez++;
+                }
+            }
+            alert("El caracter introducido se repite " + vez + " veces en la frase escrita");
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
